@@ -25,6 +25,7 @@ const ash = require('express-async-handler');
 /** GET ALL STUDENTS: express-async-handler (ash) */
 // automatically catches any error and sends to middleware
 // same as using try/catch and calling next(error)
+//include:Campus >> campus included with the studens
 router.get('/', ash(async(req, res) => {
   let students = await Student.findAll({include: [Campus]});
   res.status(200).json(students);

@@ -1,3 +1,5 @@
+//comines student router & campus router exporting as one
+
 const express = require('express');
 const router = express.Router();
 

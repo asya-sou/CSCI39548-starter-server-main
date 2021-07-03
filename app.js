@@ -16,6 +16,7 @@ const apiRouter = require('./routes/index');
 const syncDatabase = async () => {
   //sync and seed
   try {
+    //REMOVEforce true & seedDB ON PRODUCTION 
     await db.sync({force: true});
     console.log('------Synced to db--------')
     await seedDB();
