@@ -5,7 +5,6 @@ const { Student, Campus } = require('../database/models');
 const ash = require('express-async-handler');
 
 /** GET ALL CAMPUSES */
-
 router.get('/', ash(async(req, res) => {
   let campuses = await Campus.findAll({include: [Student]});
   res.status(200).json(campuses);
@@ -34,6 +33,15 @@ router.delete('/:id', function(req, res, next) {
     .then(() => res.status(200).json("Deleted this campus!"))
     .catch(err => next(err));
 });
+
+//update campus
+router.put('/:id', ash(async(req, res) => {
+  await Campus.update(req.body,
+        { where: {id: req.params.id} }
+  );
+  let campus = await Campus.findByPk(req.params.id);
+  res.status(201).json(campus);
+}));
 
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
