@@ -17,5 +17,23 @@ router.get('/:id', ash(async(req, res) => {
   res.status(200).json(campus);
 }));
 
+/** ADD NEW CAMPUS */
+router.post('/', function(req, res, next) {
+  Campus.create(req.body)
+    .then(createdCampus => res.status(200).json(createdCampus))
+    .catch(err => next(err));
+});
+
+/** DELETE CAMPUS */
+router.delete('/:id', function(req, res, next) {
+  Campus.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(() => res.status(200).json("Deleted this campus!"))
+    .catch(err => next(err));
+});
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
