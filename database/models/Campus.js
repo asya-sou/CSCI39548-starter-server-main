@@ -8,10 +8,21 @@ const Campus = db.define("campus", {
     allowNull: false
   },
 
-  description: {
+  imageUrl: {
     type: Sequelize.STRING,
+    isUrl: true,
+    defaultValue: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPy8lTb_58XcVBRZfjx8nTmwBHWOy_8HdRUw&usqp=CAU'
+  },
+
+  address: {
+    type: Sequelize.TEXT,
+    allowNull:false
+  },
+
+  description: {
+    type: Sequelize.TEXT,
   }
 
 });
-
+ 
 module.exports = Campus;
