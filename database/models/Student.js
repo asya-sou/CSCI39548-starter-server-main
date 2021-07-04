@@ -25,7 +25,7 @@ const Student = db.define("student", {
     defaultValue: 'https://lh3.googleusercontent.com/proxy/-z6dPsQgYnQVCTlBUfKhW460FRBw0CpiVIpf4RkEN8I0nWbhjfQiQqHUs0x9FSXadSGR9EPHtJeUkQ9oACWBJ6LkpKZa1_AkFTED_mfZhIQR'
   },
 
-  gpa {
+  gpa: {
     type: Sequelize.DECIMAL (1,1),
     defaultValue: 0.0
 
