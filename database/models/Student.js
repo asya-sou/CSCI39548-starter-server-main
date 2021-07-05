@@ -22,13 +22,12 @@ const Student = db.define("student", {
   imageUrl: {
     type: Sequelize.STRING,
     isUrl: true,
-    defaultValue: 'https://lh3.googleusercontent.com/proxy/-z6dPsQgYnQVCTlBUfKhW460FRBw0CpiVIpf4RkEN8I0nWbhjfQiQqHUs0x9FSXadSGR9EPHtJeUkQ9oACWBJ6LkpKZa1_AkFTED_mfZhIQR'
+    defaultValue: 'https://us.123rf.com/450wm/lineartestpilot/lineartestpilot1802/lineartestpilot180205164/94730024-cute-fat-cartoon-human-.jpg?ver=6'
   },
 
   gpa: {
     type: Sequelize.DECIMAL (1,1),
     defaultValue: 0.0
-
   }
 
 });

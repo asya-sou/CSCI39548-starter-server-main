@@ -11,7 +11,7 @@ const Campus = db.define("campus", {
   imageUrl: {
     type: Sequelize.STRING,
     isUrl: true,
-    defaultValue: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPy8lTb_58XcVBRZfjx8nTmwBHWOy_8HdRUw&usqp=CAU'
+    defaultValue: 'https://cdn.pixabay.com/photo/2017/11/09/13/00/buildings-2933455_1280.png'
   },
 
   address: {
