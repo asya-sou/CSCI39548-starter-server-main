@@ -3,12 +3,12 @@ const db = require('../db');
 
 const Student = db.define("student", {
 
-  firstname: {
+  firstName: {
     type: Sequelize.STRING,
     allowNull: false
   },
 
-  lastname: {
+  lastName: {
     type: Sequelize.STRING,
     allowNull: false
   },
