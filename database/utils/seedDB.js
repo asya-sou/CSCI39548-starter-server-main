@@ -11,6 +11,11 @@ const seedDB = async () => {
 		address: "123 Not Happening Ave, Welness Check, MO 54321",
 		description: "This is a school in MA."
 	});
+	const dummy_campus3 = await Campus.create({
+		name: "Yale",
+		address: "123 Not Happening Ave, Welness Check, PA 11111",
+		description: "This is a school in PA."
+	});
 
 	const dummy_student = await Student.create({
 			firstName: "Joe",
