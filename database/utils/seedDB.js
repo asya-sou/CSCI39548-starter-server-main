@@ -23,7 +23,24 @@ const seedDB = async () => {
 			email: "joe@shmo.com"
 	});
 
+	const dummy_student2 = await Student.create({
+		firstName: "Momo",
+		lastName: "Soughou",
+		email: "momo@soughou.com",
+	});
+
+	const dummy_student3 = await Student.create({
+		firstName: "Kisa",
+		lastName: "Soughou",
+		email: "kisa@soughou.com",
+		gpa: 4.0
+	});
+
 	await dummy_student.setCampus(dummy_campus);
+	await dummy_student2.setCampus(dummy_campus3);
+	await dummy_student3.setCampus(dummy_campus2);
+
+
 	
 }
 
